@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>lineal</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="lineal.css">
+</head>
+<body>
+  <div class="jumbotron">
+    <h1>lineal</h1>
+  </div>
+
+  <div class="container" ng-controller="AppCtrl">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="contact.name"></td>
+          <td><input class="form-control" ng-model="contact.info"></td>
+          <td><button class="btn btn-primary">Add</button></td>
+        </tr>
+        <tr ng-repeat="contact in lineal_db">
+          <td>{{contact.name}}</td>
+          <td>{{contact.info}}</td>
+        </tr>
+      </tbody>
+    </div>
+  </table>
+
+ 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="controllers/controller.js"></script>
+</body>
+</html>
